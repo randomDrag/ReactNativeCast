@@ -1,0 +1,23 @@
+# app setup 
+
+####################################################
+                installed 
+####################################################
+axios
+react-native-animatable
+react-native-fast-image 
+react-native-gesture-handler
+react-native-permission
+react-native-safe-area-context 
+###################################
+                redux
+#####################################
+react-redux 
+redux-form 
+@reduxjs/toolkit
+#########################################
+                navigation
+###############################################
+@react-navigation/native 
+@react-navigation/stack
+react-native-screens
