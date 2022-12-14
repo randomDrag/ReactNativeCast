@@ -2,10 +2,43 @@ import {IStateList , StateListAction} from '../actions'
 
 import { ActionTypes } from "../actions/types";
 
-export const StateListReducer = (state: IStateList[] = [], action: StateListAction) => {
+
+interface s {
+  payload : IStateList[] ,
+  isLoading : boolean,
+  error : boolean
+}
+
+const st : s = {
+  payload : [],
+  isLoading : false,
+  error : false
+}
+
+export const StateListReducer = (state = st, action: StateListAction) => {
   switch (action.type) {
     case ActionTypes.stateList:
-      return action.payload;
+      return {
+        ...state,
+       payload: action.payload ,
+    
+      
+
+      }
+      case ActionTypes.ERROR_FETCH: 
+
+        
+          return {
+            ...state,
+          payload : action.payload ,
+            isLoading : false,
+            error : action.error
+          
+    
+          }
+
+
+        
 
     default:
       return state;
